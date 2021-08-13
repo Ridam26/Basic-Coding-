@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int N1,N2,D1,D2,x,y,c,gcd;
+    scanf("%d",&N1);
+    scanf("%d",&D1);
+    scanf("%d",&N2);
+    scanf("%d",&D2);
+    printf("The 1st fraction is %d/%d",N1,D1);
+    printf("\n");
+    printf("The 2 nd fraction is %d/%d",N2,D2);
+    x=(N1*D2)+(N2*D1);
+    y=D1*D2;
+    for(c=1; c<x && c<y; c++)
+    {
+        if(x%c==0 && y%c==0)
+        gcd=c;
+    }
+    printf("\n");
+    printf("The result is %d/%d  ",x/gcd,y/gcd);
+    printf("\n");
+}
